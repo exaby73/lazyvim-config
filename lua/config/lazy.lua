@@ -7,6 +7,7 @@ end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
+  ---@diagnostic disable-next-line: assign-type-mismatch
   dev = {
     path = "~/nvim",
     fallback = true,
