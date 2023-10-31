@@ -7,7 +7,22 @@ return {
       desc = "Save without formatting",
     },
   },
-  formatters_by_ft = {
-    astro = { "prettierd", "prettier" },
+  opts = {
+    formatters = {
+      swiftformat = {
+        command = "swiftformat",
+      },
+    },
+    formatters_by_ft = {
+      astro = { "prettier" },
+      css = { "prettier" },
+      html = { "prettier" },
+      javascript = { "prettier" },
+      javascriptreact = { "prettier" },
+      svelte = { "prettier" },
+      swift = { "swiftformat" },
+      typescript = { "prettier" },
+      typescriptreact = { "prettier" },
+    },
   },
 }
