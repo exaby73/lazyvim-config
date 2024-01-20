@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 })
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = { "*.md" },
+  pattern = { "*.md", "*.dart" },
   callback = function()
     vim.opt.shiftwidth = 2
     vim.opt.tabstop = 2
