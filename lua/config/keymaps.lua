@@ -20,3 +20,7 @@ keymap("n", "<c-_>", function()
 end, { desc = "Toggle terminal (cwd)" })
 
 keymap("n", "<leader>fT", lazyterm, { desc = "Terminal (root dir)" })
+
+keymap("n", "«", function()
+  vim.lsp.buf.code_action()
+end, { desc = "Code action" })
