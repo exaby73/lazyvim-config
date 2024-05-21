@@ -51,6 +51,22 @@ end, { desc = "Buffer Goto prev" })
 
 -- End Tabufline
 
+-- Resize splits
+
+-- Map to Option + Shift + J
+map("n", "Ô", "<cmd>resize +2<CR>", { desc = "Resize -2" })
+
+-- Map to Option + Shift + K
+map("n", "", "<cmd>resize -2<CR>", { desc = "Resize +2" })
+
+-- Map to Option + Shift + L
+map("n", "Ò", "<cmd>vertical resize +2<CR>", { desc = "Vertical Resize +2" })
+
+-- Map to Option + Shift + H
+map("n", "Ó", "<cmd>vertical resize -2<CR>", { desc = "Vertical Resize -2" })
+
+-- End Resize splits
+
 -- Genral mappings
 
 -- Paste replacement
