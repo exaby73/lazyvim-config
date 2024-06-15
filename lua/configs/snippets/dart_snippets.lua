@@ -24,7 +24,7 @@ local postfix = require("luasnip.extras.postfix").postfix
 -- local types = require "luasnip.util.types"
 -- local parse = require("luasnip.util.parser").parse_snippet
 -- local ms = ls.multi_snippet
--- local k = require("luasnip.nodes.key_indexer").new_key
+local k = require("luasnip.nodes.key_indexer").new_key
 
 local function get_current_file_name()
   return vim.fn.expand "%:t:r"
@@ -108,17 +108,17 @@ return {
     t "const factory ",
     d(1, function()
       return sn(nil, { i(1, class_name_from_file_name()) })
-    end),
+    end, { key = "class_name" }),
     t ".",
     i(2, "case"),
     t "(",
     i(3),
     t ") = ",
     d(4, function(args)
-      local case = args[1][1]
+      local case = args[2][1]
       local case_with_first_letter_upper = case:gsub("^%l", string.upper)
-      return sn(nil, { t(case_with_first_letter_upper) })
-    end, { 2 }),
+      return sn(nil, { t(args[1]), t(case_with_first_letter_upper) })
+    end, { 1, 2 }),
     t ";",
   }),
 
