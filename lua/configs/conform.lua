@@ -4,6 +4,7 @@ local options = {
     css = { "prettier" },
     html = { "prettier" },
     dart = { "dart_format" },
+    php = { "php_cs_fixer" },
   },
 
   formatters = {

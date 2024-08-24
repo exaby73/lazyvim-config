@@ -8,6 +8,7 @@ return {
   end,
   config = function(_, opts)
     dofile(vim.g.base46_cache .. "nvimtree")
+
     opts["on_attach"] = function(bufnr)
       local nvimtreeapi = require "nvim-tree.api"
 
